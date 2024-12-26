@@ -1,16 +1,57 @@
-# space
+Getting Started
 
-A new Flutter project.
+This is a Flutter project that uses the NASA API to display information about space objects.
+1. Architecture Used The app is built using the Model-View architecture:
+* Model: Manages the app’s data and logic.
+* View: Displays the user interface and handles user interactions.
+2. Tools and Features
+* Hive: Used to store favourite photos locally for quick access.
+* Provider: Used to manage the app's state, especially to track the count of favourite photos.
+* SharedPreferences: Used to save responses offline so the app can show data without an internet connection.
+3. Challenges and Solutions
+* Challenge: Storing favourite photos was tricky because APOD and Mars images had different data formats and keys. Solution: I handled this by writing conditions to manage the differences between the two types of data.
+  
+Prerequisites
 
-## Getting Started
+Flutter SDK: Download the Flutter SDK
+A code editor or IDE with Flutter support (e.g., Visual Studio Code)
+Installation
 
-This project is a starting point for a Flutter application.
+Clone the repository:
+<!-- end list -->
 
-A few resources to get you started if this is your first Flutter project:
+git clone https://github.com/sahilkhotkar/dess_task.git
+<!-- end list -->
+Navigate to the project directory:
+<!-- end list -->
+cd dess_task
+<!-- end list -->
+Install the dependencies:
+<!-- end list -->
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+flutter pub get
+<!-- end list -->
+Create a file named .env in the root of your project. This file will store your NASA API key.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Add the following line to your .env file, replacing <YOUR_NASA_API_KEY> with your actual NASA API key:
+
+<!-- end list -->
+
+
+  "NASA_API_KEY": "<YOUR_NASA_API_KEY>"
+
+You can obtain a free NASA API key from NASA Open API.
+Running the app
+<!-- end list -->
+flutter run
+Connect your device or start an emulator.
+
+Run the following command to start the development server:
+
+<!-- end list -->
+
+
+
+
+
+I hope this helps!
